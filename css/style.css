@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background-color: #3a3030;
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+}
+header .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  line-height: 7rem;
+}
+header h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+header .between {
+  font-size: 1.4rem;
+}
+header .label-highscore {
+  font-size: 1.2rem;
+}
+header .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
+  border-radius: 50%;
+}
+header .number::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #eee;
+  z-index: -1;
+}
+
+main {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+main .left {
+  width: 58rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .left .buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 5rem;
+}
+main .left .inputvalue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .left .inputvalue .guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  padding: 2rem;
+  width: 45rem;
+  text-align: center;
+  display: block;
+  outline: none;
+}
+main .left .inputvalue .guess::-webkit-outer-spin-button, main .left .inputvalue .guess::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .left .inputvalue .guess::-moz-placeholder {
+  font-size: 2rem;
+}
+main .left .inputvalue .guess::placeholder {
+  font-size: 2rem;
+}
+main .left .inputvalue::after {
+  content: "<<";
+  padding-left: 5px;
+  font-size: 25px;
+  color: #60b347;
+}
+main .left .inputvalue::before {
+  content: ">>";
+  padding-right: 5px;
+  font-size: 25px;
+  color: #60b347;
+}
+main .right {
+  width: 44rem;
+  font-size: 2rem;
+}
+main .right .message {
+  margin-bottom: 8rem;
+  height: 2rem;
+  line-height: 3.5rem;
+}
+main .right .label-score {
+  margin-bottom: 2rem;
+}
+
+/* Button Style */
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #3a3030;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 1100px) {
+  main {
+    flex-direction: column;
+  }
+  main .right {
+    margin-top: 5rem;
+    width: 30rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  main .left .buttons {
+    flex-direction: column;
+  }
+  main .left .inputvalue .guess {
+    width: 19rem;
+  }
+}/*# sourceMappingURL=style.css.map */
